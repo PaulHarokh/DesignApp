@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Design Test</string>
+    <string name="greetings">Привет, %1$s!</string>
+    <string name="service">Ногтевой сервис в\nгороде Минск</string>
+    <string name="adv">Лучшие предложения</string>
+    <string name="laser">Лазерная\nэпиляция</string>
+    <string name="services_for_u">Услуги для вас</string>
+    <string name="all_services">Все услуги</string>
+</resources>

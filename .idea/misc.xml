@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/best_adv_back.xml" value="0.22447916666666667" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.2755208333333333" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.14947916666666666" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/ic_baseline_notifications_none_24.xml" value="0.14947916666666666" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/notification_flag.xml" value="0.14947916666666666" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/rb_off.xml" value="0.2234375" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/rb_on.xml" value="0.2234375" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/rec1.xml" value="0.2712820512820513" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/round116.xml" value="0.14947916666666666" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/round168.xml" value="0.14947916666666666" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/drawable/round64.xml" value="0.14947916666666666" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/layout/item_service.xml" value="0.20729166666666668" />
+        <entry key="..\:/Android Apps/DesignTest/app/src/main/res/layout/page.xml" value="0.72" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

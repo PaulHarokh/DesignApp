@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAva"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/avatar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvGreetings"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/sf_ui_text"
+            android:text="@string/greetings"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/cvAva"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:scaleX="0.55"
+            android:scaleY="0.55"
+            android:src="@drawable/notification"
+            app:layout_constraintBottom_toBottomOf="@+id/tvGreetings"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvGreetings"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:scaleX="0.55"
+            android:scaleY="0.55"
+            android:src="@drawable/find"
+            app:layout_constraintBottom_toBottomOf="@id/imNotification"
+            app:layout_constraintRight_toLeftOf="@id/imNotification"
+            app:layout_constraintTop_toTopOf="@id/imNotification"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imNotificationFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/notification_flag"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvGreetings"
+            tools:ignore="ContentDescription" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvServiceShadow"
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/shadow_blue"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvAva" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvService"
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvAva">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/sf_ui_text"
+                    android:gravity="top"
+                    android:lineSpacingExtra="2sp"
+                    android:text="@string/service"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:translationY="-0.87sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imArrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="25.86dp"
+                    android:layout_marginEnd="25.86dp"
+                    android:rotation="315"
+                    android:src="@drawable/ic_arrow"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/round64"
+                    app:layout_constraintBottom_toBottomOf="@id/imArrow"
+                    app:layout_constraintLeft_toLeftOf="@id/imArrow"
+                    app:layout_constraintRight_toRightOf="@id/imArrow"
+                    app:layout_constraintTop_toTopOf="@id/imArrow"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="116dp"
+                    android:layout_height="116dp"
+                    android:src="@drawable/round116"
+                    app:layout_constraintBottom_toBottomOf="@id/imArrow"
+                    app:layout_constraintLeft_toLeftOf="@id/imArrow"
+                    app:layout_constraintRight_toRightOf="@id/imArrow"
+                    app:layout_constraintTop_toTopOf="@id/imArrow"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:layout_width="168dp"
+                    android:layout_height="168dp"
+                    android:src="@drawable/round168"
+                    app:layout_constraintBottom_toBottomOf="@id/imArrow"
+                    app:layout_constraintLeft_toLeftOf="@id/imArrow"
+                    app:layout_constraintRight_toRightOf="@id/imArrow"
+                    app:layout_constraintTop_toTopOf="@id/imArrow"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="165dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@drawable/best_adv_back"
+                    android:fontFamily="@font/sf_ui_text"
+                    android:gravity="center"
+                    android:rotation="358"
+                    android:text="@string/adv"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imFire"
+                    app:layout_constraintStart_toStartOf="@id/imFire"
+                    app:layout_constraintTop_toTopOf="@id/imFire" />
+
+                <ImageView
+                    android:id="@+id/imFire"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="16dp"
+                    android:rotation="358"
+                    android:src="@drawable/fire"
+                    app:layout_constraintLeft_toLeftOf="@id/tvService"
+                    app:layout_constraintTop_toBottomOf="@id/tvService"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/rb2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/rb_off"
+            app:layout_constraintLeft_toLeftOf="@id/cvServiceShadow"
+            app:layout_constraintRight_toRightOf="@id/cvServiceShadow"
+            app:layout_constraintTop_toBottomOf="@id/cvServiceShadow"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/rb1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/rb_on"
+            app:layout_constraintBottom_toBottomOf="@id/rb2"
+            app:layout_constraintRight_toLeftOf="@id/rb2"
+            app:layout_constraintTop_toTopOf="@id/rb2"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/rb3"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/rb_off"
+            app:layout_constraintBottom_toBottomOf="@id/rb2"
+            app:layout_constraintLeft_toRightOf="@id/rb2"
+            app:layout_constraintTop_toTopOf="@id/rb2"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/rb4"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/rb_off"
+            app:layout_constraintBottom_toBottomOf="@id/rb2"
+            app:layout_constraintLeft_toRightOf="@id/rb3"
+            app:layout_constraintTop_toTopOf="@id/rb2"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvServicesForU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/sf_ui_text"
+            android:text="@string/services_for_u"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/cvService"
+            app:layout_constraintTop_toBottomOf="@id/rb2" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_ui_text"
+            android:text="@string/all_services"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvServicesForU"
+            app:layout_constraintRight_toRightOf="@id/cvService" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintLeft_toLeftOf="@id/cvService"
+            app:layout_constraintTop_toBottomOf="@id/tvServicesForU" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
