@@ -6,4 +6,6 @@
     <string name="laser">Лазерная\nэпиляция</string>
     <string name="services_for_u">Услуги для вас</string>
     <string name="all_services">Все услуги</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_profile">Ваш профиль</string>
 </resources>

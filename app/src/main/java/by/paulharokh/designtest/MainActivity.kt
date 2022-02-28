@@ -2,37 +2,31 @@ package by.paulharokh.designtest
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import by.paulharokh.designtest.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val username = "Алина"
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
 
-        val formatString: String = applicationContext.getString(R.string.greetings)
-        val substitutedString = String.format(
-            formatString,
-            username
-        )
+    }
 
-        binding.tvGreetings.text = substitutedString
-
-        val services = listOf(
-            Service(R.drawable.woman_grey, getText(R.string.laser) as String),
-            Service(R.drawable.woman_blue,getText(R.string.laser) as String),
-            Service(R.drawable.woman_grey, getText(R.string.laser) as String),
-            Service(R.drawable.woman_blue,getText(R.string.laser) as String),
-
-        )
-
-        binding.rvServices.adapter = ServiceAdapter(services)
-
-
+    override fun onBackPressed() {
+        val destination = navController.currentDestination
+        if (destination!!.id == R.id.startFragment) {
+            finish()
+        }
+        super.onBackPressed()
     }
 }
