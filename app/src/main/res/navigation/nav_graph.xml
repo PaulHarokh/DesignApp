@@ -9,18 +9,25 @@
         android:id="@+id/startFragment"
         android:name="by.paulharokh.designtest.StartFragment"
         android:label="fragment_start"
-        tools:layout="@layout/fragment_start" >
-        <action
-            android:id="@+id/action_startFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_start" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="by.paulharokh.designtest.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_profileFragment_to_startFragment"
-            app:destination="@id/startFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="by.paulharokh.designtest.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" />
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="by.paulharokh.designtest.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/fourthFragment"
+        android:name="by.paulharokh.designtest.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" />
 </navigation>

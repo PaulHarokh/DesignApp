@@ -2,7 +2,6 @@ package by.paulharokh.designtest
 
 import android.os.Bundle
 import android.transition.TransitionInflater
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
@@ -10,16 +9,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import by.paulharokh.designtest.databinding.FragmentProfileBinding
+import by.paulharokh.designtest.databinding.FragmentThirdBinding
 
 
-class ProfileFragment : Fragment(), View.OnTouchListener {
-
+class ThirdFragment : Fragment(), View.OnTouchListener {
 
     private var t: Float = -1.0f
     private var m: Float = -1.0f
-    private var _profileBinding: FragmentProfileBinding? = null
-    private val profileBinding get() = _profileBinding!!
+    private var _thirdBinding: FragmentThirdBinding? = null
+    private val thirdBinding get() = _thirdBinding!!
     private lateinit var navController: NavController
 
 
@@ -27,42 +25,47 @@ class ProfileFragment : Fragment(), View.OnTouchListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _profileBinding = FragmentProfileBinding.inflate(inflater, container, false)
-        return profileBinding.root
+        _thirdBinding = FragmentThirdBinding.inflate(inflater, container, false)
+        return thirdBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         navController = view.findNavController()
-
-        view.setOnTouchListener(this)
-
-        val tInflater = TransitionInflater.from(requireContext())
-        enterTransition = tInflater.inflateTransition(R.transition.slide_top)
-        exitTransition = tInflater.inflateTransition(R.transition.slide_bottom)
+        thirdBinding.cl.setOnTouchListener(this)
 
     }
-
 
     override fun onTouch(view: View?, event: MotionEvent?): Boolean {
         view?.performClick()
 
+        val tInflater = TransitionInflater.from(requireContext())
+
         if (event?.action == MotionEvent.ACTION_DOWN) {
-            t = event.y
+            t = event.x
         }
 
         if (event?.action == MotionEvent.ACTION_MOVE) {
-            m = event.y
+            m = event.x
         }
 
-        if (t > 0.0f && m > 0.0f && t + 200 < m) {
-            navController.navigate(R.id.startFragment)
+        if (t > 0.0f && m > 0.0f && t > m + 200) {
+            navController.navigate(R.id.fourthFragment)
+            exitTransition = tInflater.inflateTransition(R.transition.slide_left)
         } else {
-            m = -1.0f
+            if (t > 0.0f && m > 0.0f && t + 200 < m) {
+                navController.navigate(R.id.secondFragment)
+                exitTransition = tInflater.inflateTransition(R.transition.slide_right)
+            } else {
+                m = -1.0f
+            }
         }
+
+
 
         return true
     }
+
+
 }

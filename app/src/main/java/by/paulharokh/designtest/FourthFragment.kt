@@ -10,16 +10,15 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import by.paulharokh.designtest.databinding.FragmentProfileBinding
+import by.paulharokh.designtest.databinding.FragmentFourthBinding
 
 
-class ProfileFragment : Fragment(), View.OnTouchListener {
-
+class FourthFragment : Fragment(), View.OnTouchListener {
 
     private var t: Float = -1.0f
     private var m: Float = -1.0f
-    private var _profileBinding: FragmentProfileBinding? = null
-    private val profileBinding get() = _profileBinding!!
+    private var _fourthBinding: FragmentFourthBinding? = null
+    private val fourthBinding get() = _fourthBinding!!
     private lateinit var navController: NavController
 
 
@@ -27,42 +26,42 @@ class ProfileFragment : Fragment(), View.OnTouchListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _profileBinding = FragmentProfileBinding.inflate(inflater, container, false)
-        return profileBinding.root
+        _fourthBinding = FragmentFourthBinding.inflate(inflater, container, false)
+        return fourthBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         navController = view.findNavController()
-
-        view.setOnTouchListener(this)
-
-        val tInflater = TransitionInflater.from(requireContext())
-        enterTransition = tInflater.inflateTransition(R.transition.slide_top)
-        exitTransition = tInflater.inflateTransition(R.transition.slide_bottom)
+        fourthBinding.cl.setOnTouchListener(this)
 
     }
-
 
     override fun onTouch(view: View?, event: MotionEvent?): Boolean {
         view?.performClick()
 
+        val tInflater = TransitionInflater.from(requireContext())
+
         if (event?.action == MotionEvent.ACTION_DOWN) {
-            t = event.y
+            t = event.x
+            Log.d("!!!t", t.toString())
         }
 
         if (event?.action == MotionEvent.ACTION_MOVE) {
-            m = event.y
+            m = event.x
+            Log.d("!!!m", m.toString())
+
         }
 
         if (t > 0.0f && m > 0.0f && t + 200 < m) {
-            navController.navigate(R.id.startFragment)
+            navController.navigate(R.id.thirdFragment)
+            exitTransition = tInflater.inflateTransition(R.transition.slide_right)
         } else {
             m = -1.0f
         }
 
         return true
     }
+
 }
