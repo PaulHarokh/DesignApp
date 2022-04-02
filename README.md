@@ -1,4 +1,4 @@
-# DesignTest
+# Design App
 
 * 5.2 inches
 <img alt="Icon" src="/ReadMe images/phone.jpg" />
